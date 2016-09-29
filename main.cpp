@@ -17,7 +17,7 @@ public:
         height = h;
     }
 
-	void setRadius(int r)
+    void setRadius(int r)
     {
 
         radius = r;
@@ -26,7 +26,7 @@ public:
 protected:
     int width;
     int height;
-	int radius;
+    int radius;
 };
 
 class Triangle: public Shape
@@ -63,32 +63,33 @@ public:
     {
         return 3.14*(radius*radius);
     }
+};
 
-int main(void)
-{
-    Triangle Tri;
-    Tri.setWidth(5);
-    Tri.setHeight(7);
-    //Print the area of the project.
-    cout<<"Total Triangle area: " << Tri.getArea() <<endl;
+    int main(void)
+    {
+        Triangle Tri;
+        Tri.setWidth(5);
+        Tri.setHeight(7);
+        //Print the area of the project.
+        cout<<"Total Triangle area: " << Tri.getArea() <<endl;
 
-    Rectangle Rec;
-    Rec.setWidth(5);
-    Rec.setHeight(7);
+        Rectangle Rec;
+        Rec.setWidth(5);
+        Rec.setHeight(7);
 
-    cout << "Area of Rectangle: " << Rec.getArea() << endl;
+        cout << "Area of Rectangle: " << Rec.getArea() << endl;
 
-	Circle Rad;
+        Circle Rad;
 
-    Rad.setRadius(4);
+        Rad.setRadius(4);
 
-    cout << "Area of Circle: " << Rad.getArea() << endl;
-
-
-    total_areas = Tri.getArea()+Rec.getArea()+Rad.getArea();
-
-    cout << "Total area of shapes " << total_areas <<endl;
+        cout << "Area of Circle: " << Rad.getArea() << endl;
 
 
-    return 0;
-}
+        double total_areas = Tri.getArea()+Rec.getArea()+Rad.getArea();
+
+        cout << "Total area of shapes " << total_areas <<endl;
+
+
+        return 0;
+    }
