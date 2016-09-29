@@ -16,9 +16,17 @@ public:
     {
         height = h;
     }
+
+	void setRadius(int r)
+    {
+
+        radius = r;
+
+    }
 protected:
     int width;
     int height;
+	int radius;
 };
 
 class Triangle: public Shape
@@ -43,6 +51,19 @@ public:
     }
 };
 
+// class that calc area of a circle
+class Circle: public Shape
+
+{
+
+public:
+
+    int getArea()
+
+    {
+        return 3.14*(radius*radius);
+    }
+
 int main(void)
 {
     Triangle Tri;
@@ -56,6 +77,17 @@ int main(void)
     Rec.setHeight(7);
 
     cout << "Area of Rectangle: " << Rec.getArea() << endl;
+
+	Circle Rad;
+
+    Rad.setRadius(4);
+
+    cout << "Area of Circle: " << Rad.getArea() << endl;
+
+
+    total_areas = Tri.getArea()+Rec.getArea()+Rad.getArea();
+
+    cout << "Total area of shapes " << total_areas <<endl;
 
 
     return 0;
